@@ -1,0 +1,183 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ddd;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cartel {
+    width: 800px;
+    max-width: 95%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título rojo */
+header {
+    background-color: #bb0010;
+    color: white;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 90px;
+    margin: 0;
+    font-weight: 900;
+}
+
+/* Subtítulo */
+.cartel > h2 {
+    font-size: 30px;
+    margin: 12px 0;
+    white-space: nowrap;
+}
+
+/* Símbolo clase A */
+.simbolo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.triangulo {
+    width: 130px;
+    height: 115px;
+    background-color: #00552c;
+
+    clip-path: polygon(
+        50% 0%,
+        100% 100%,
+        0% 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.triangulo span {
+    color: white;
+    font-size: 75px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.fuego {
+    background-color: #08276c;
+    width: 140px;
+    height: 110px;
+    margin: 15px 0;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+}
+
+.simbolo p {
+    margin: 2px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Instrucciones */
+.instrucciones {
+    margin-top: 20px;
+}
+
+.instrucciones h2 {
+    color: #08276c;
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.instrucciones ol {
+    text-align: left;
+    padding-left: 65px;
+    margin-top: 5px;
+}
+
+.instrucciones li {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Figuras inferiores */
+.figuras {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 50px;
+    margin-top: 15px;
+    height: 210px;
+}
+
+.figura {
+    background-color: #c40010;
+}
+
+.figura1 {
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        40% 100%,
+        0 100%
+    );
+}
+
+.figura2 {
+    clip-path: polygon(
+        38% 0,
+        100% 0,
+        62% 100%,
+        0 100%
+    );
+}
+
+.figura3 {
+    clip-path: polygon(
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 45px;
+    }
+
+    .cartel > h2 {
+        font-size: 14px;
+    }
+
+    .instrucciones h2 {
+        font-size: 20px;
+    }
+
+    .instrucciones li {
+        font-size: 15px;
+    }
+
+    .instrucciones ol {
+        padding-left: 30px;
+    }
+
+    .figuras {
+        height: 120px;
+        gap: 20px;
+    }
+}
